@@ -1,6 +1,8 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import "./Article.css";
+
+import { v4 as uuidv4 } from 'uuid';
+import Image from './image';
 
 interface ArticleProps {
   title: string,
@@ -16,14 +18,12 @@ function Article({title, category, date, text, images}: ArticleProps) {
       <h3>{title}</h3>
       <span>{category}</span>
       <span>{date}</span>
-      <div>{text}</div>
+      <p className="articles__article__content">{text}</p>
       {images && images.length > 0 && <div className="articles__article__image">
-        {images.map((image, index) => <img src={`/src/assets${image}`} alt={`l'image n°${index} de l'article : ${title}`} />)}
+        {images.map((image, index) => <Image key={uuidv4()} index={index} url={image} articleTitle={title} />)}
         </div>}
     </article>
   );
 }
 
-// images.map((image, index) => <img src={image} alt="`l'image n°${index} de l'article : ${title}`" />)
-// <img src={image} alt={`l'image n°${index} de l'article : ${title}`} />
 export default Article;

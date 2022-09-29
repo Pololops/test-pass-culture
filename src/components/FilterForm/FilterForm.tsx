@@ -10,8 +10,6 @@ interface FilterProps {
 }
 
 function FilterForm({categories, dates, onCatSelectChange, onDateSelectChange }: FilterProps) {
-
-
   return (
     <form className="form">
       <legend>Filtres : </legend>

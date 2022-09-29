@@ -14,7 +14,7 @@ function Select({name, type, options, onChange}: SelectProps) {
       <label htmlFor={type}>{name} : </label>
       <select id={type} onChange={onChange}> 
         <option value="">Tous</option>
-        {options.map((option: string) => <option value={option}>{option}</option>)}
+        {options.map((option: string) => <option key={option} value={option}>{option}</option>)}
       </select>
     </fieldset>
   );

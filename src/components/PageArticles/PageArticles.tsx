@@ -50,8 +50,11 @@ function PageArticles() {
   }
 
   const getFilters = () => {
-    setCategories(data.news.map(({category}) => category));
-    setDates(data.news.map(({date}) => date));
+    const categoriesList = Array.from(new Set<string>([...data.news.map(({category}) => category)]));
+    const datesList = Array.from(new Set<string>([...data.news.map(({date}) => date)]));
+    
+    setCategories(categoriesList);
+    setDates(datesList);
     setFilteredArticles(articles);
   }
 

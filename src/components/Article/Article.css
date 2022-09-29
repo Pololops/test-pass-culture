@@ -20,6 +20,10 @@
 	margin: 0 0.5rem 0 0;
 }
 
-.articles__article div {
+.articles__article__content {
 	margin-top: 1.5rem;
+}
+
+.articles__article__image {
+	margin: 0.4rem;
 }
