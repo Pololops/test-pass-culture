@@ -1,6 +1,5 @@
 import "./App.css";
 
-import React, { useEffect, useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 import Header from "../Header/Header";
 import PageArticles from "../PageArticles/PageArticles";

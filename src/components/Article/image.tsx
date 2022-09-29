@@ -8,13 +8,8 @@ interface ImageProps {
 }
 
 function Image({index, url, articleTitle}: ImageProps) {
-  const imageURLResolver = () => {
-    return url;
-  }
-
   return (
-
-    <img src={url} alt={`Illustration n°${index} de l'article intitulé : ${articleTitle}`} />
+    <img className="articles__article__image" src={url} alt={`Illustration n°${index} de l'article intitulé : ${articleTitle}`} />
   );
 }
 

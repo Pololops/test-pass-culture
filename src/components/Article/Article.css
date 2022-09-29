@@ -4,6 +4,7 @@
 	text-align: justify;
 	border: 1px solid lightgray;
 	padding: 1rem;
+	overflow: hidden;
 }
 
 .articles__article h3 {
@@ -25,5 +26,13 @@
 }
 
 .articles__article__image {
-	margin: 0.4rem;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	margin-top: 1rem;
+}
+
+.articles__article__image img {
+	width: 46%;
+	margin: 2%;
 }
