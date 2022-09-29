@@ -1,3 +1,21 @@
 .header {
-  background-color: red
+  position: relative;
+  background: linear-gradient(150deg, #e50a58, #a80470);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 1rem 5rem;
+  gap: 2rem;
+}
+
+.header__title span {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.header__title__logo {
+  width: 15rem;
+  filter: invert();
 }
