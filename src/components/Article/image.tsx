@@ -9,12 +9,12 @@ interface ImageProps {
 
 function Image({index, url, articleTitle}: ImageProps) {
   const imageURLResolver = () => {
-    return 'http://localhost:3000/src/assets' + url;
+    return url;
   }
 
   return (
 
-    <img src={url} alt={`Illustration n°${imageURLResolver()} de l'article intitulé : ${articleTitle}`} />
+    <img src={url} alt={`Illustration n°${index} de l'article intitulé : ${articleTitle}`} />
   );
 }
 

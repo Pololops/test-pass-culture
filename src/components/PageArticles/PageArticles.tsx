@@ -68,7 +68,7 @@ function PageArticles() {
   }, [catFilterValue, dateFilterValue]);
 
   return (
-    <main className="main">
+    <>
       <h2 className="main__title">Les Articles</h2>
 
       <FilterForm categories={categories} dates={dates} onCatSelectChange={categorySelectHandler} onDateSelectChange={dateSelectHandler} />
@@ -79,7 +79,7 @@ function PageArticles() {
         }: New) => 
           <Article key={title} title={title} category={category} date={date} text={text} images={images} />) : 'Auncun article trouvé !'}
       </div>
-    </main>
+    </>
   );
 }
 
