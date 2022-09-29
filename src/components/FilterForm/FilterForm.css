@@ -1,0 +1,14 @@
+.form {
+  margin-bottom: 2rem;
+}
+
+.form legend {
+  margin-bottom: 0.5rem;
+}
+
+.form__selects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
