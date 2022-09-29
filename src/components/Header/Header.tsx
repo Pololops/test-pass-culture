@@ -8,10 +8,10 @@ function Header() {
   return (
     <header className="header">
       <h1 className="header__title">
-        Pass Culture
-        <img data-testId="logo" src={logo} className="header__title__logo" alt="logo Pass Culture" />
+        <span>Pass Culture</span>
+        <img data-testid="logo" src={logo} className="header__title__logo" alt="logo Pass Culture" />
       </h1>
-      <NavBar data-testId="navbar" />
+      <NavBar data-testid="navbar" />
     </header>
   );
 }
