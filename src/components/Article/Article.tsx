@@ -14,7 +14,7 @@ interface ArticleProps {
 
 function Article({title, category, date, text, images}: ArticleProps) {
   return (
-    <article className="articles__article">
+    <article data-testid="article" className="articles__article">
       <h3>{title}</h3>
       <span>{category}</span>
       <span>{date}</span>

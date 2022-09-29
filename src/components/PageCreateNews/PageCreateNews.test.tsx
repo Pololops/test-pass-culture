@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import PageCreateNews from './PageCreateNews';
 
 describe('Header', () => {
   test('renders Header component', () => {
-    render(<App />);
+    render(<PageCreateNews />);
 
     expect(
-      screen.getByRole("heading", { level: 1 })
+      screen.getByRole("heading", { level: 2 })
     ).toBeInTheDocument();
   });
 });

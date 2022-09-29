@@ -16,7 +16,6 @@ function App() {
         <Routes>
           <Route path="/" element={<PageArticles />}  />
           <Route path="/create" element={<PageCreateNews />} />
-          <Route path="/images" element={<PageCreateNews />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
