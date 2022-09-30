@@ -6,6 +6,7 @@ import PageArticles from "../PageArticles/PageArticles";
 import PageCreateNews from "../PageCreateNews/PageCreateNews";
 import NotFound from "../NotFound/NotFound";
 import Footer from "../Footer/Footer";
+import DataContextProvider from 'Contexts/dataContext';
 
 function App() {
   
@@ -13,11 +14,13 @@ function App() {
     <div className="App">
       <Header />
       <main className="main">
-        <Routes>
-          <Route path="/" element={<PageArticles />}  />
-          <Route path="/create" element={<PageCreateNews />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <DataContextProvider>
+          <Routes>
+            <Route path="/" element={<PageArticles />}  />
+            <Route path="/create" element={<PageCreateNews />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </DataContextProvider>
       </main>
       <Footer />
     </div>

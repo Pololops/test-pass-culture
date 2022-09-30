@@ -1,6 +1,6 @@
 import React from 'react';
 import "./FilterForm.css";
-import Select from './Select'
+import Select from '../Select/Select'
 
 interface FilterProps {
   categories: string[],
@@ -14,8 +14,8 @@ function FilterForm({categories, dates, onCatSelectChange, onDateSelectChange }:
     <form className="form">
       <legend>Filtres : </legend>
       <div className="form__selects">
-        <Select type="category" name="Catégories" options={categories} onChange={onCatSelectChange} />
-        <Select type="date" name="Dates" options={dates} onChange={onDateSelectChange} />
+        <Select type="category" label="Catégories" options={categories} onChange={onCatSelectChange} />
+        <Select type="date" label="Dates" options={dates} onChange={onDateSelectChange} />
       </div>
     </form>
   );

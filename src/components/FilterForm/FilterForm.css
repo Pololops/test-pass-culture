@@ -3,7 +3,7 @@
 }
 
 .form legend {
-  margin-bottom: 0.5rem;
+  margin: 0 auto 0.5rem auto;
 }
 
 .form__selects {

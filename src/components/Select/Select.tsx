@@ -1,17 +1,16 @@
 import React from 'react';
-import "./FilterForm.css";
 
 interface SelectProps {
-  name: string,
+  label: string,
   type: string,
   options: string[],
   onChange: React.ChangeEventHandler<HTMLSelectElement>;
 }
 
-function Select({name, type, options, onChange}: SelectProps) {
+function Select({label, type, options, onChange}: SelectProps) {
   return (
     <fieldset>
-      <label htmlFor={type}>{name} : </label>
+      <label htmlFor={type}>{label} : </label>
       <select id={type} onChange={onChange}> 
         <option value="">Tous</option>
         {options.map((option: string) => <option key={option} value={option}>{option}</option>)}
