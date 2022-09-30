@@ -9,7 +9,6 @@ import { New, LoadContextType } from '../../Contexts/dataContextTypes'
 
 function PageArticles() {
   const { 
-    articles, 
     filteredArticles, 
     categories, 
     dates, 
@@ -17,15 +16,8 @@ function PageArticles() {
     dateFilterValue, 
     categorySelectHandler, 
     dateSelectHandler, 
-    getAllData, 
     getFilteredData, 
-    getFilters 
   }: LoadContextType = useContext(DataContext);
-  
-  useEffect(() => {
-    getFilters && getFilters();
-    getAllData && getAllData();
-  }, [articles]);
 
   useEffect(() => {
     getFilteredData && getFilteredData();

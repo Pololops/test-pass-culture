@@ -6,15 +6,18 @@ import './styles/_vars.css';
 import './styles/index.css';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
+import DataContextprovider from 'Contexts/dataContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <DataContextprovider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </DataContextprovider>
   </React.StrictMode>
 );
 

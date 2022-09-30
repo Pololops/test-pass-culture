@@ -1,0 +1,9 @@
+.create__from {
+  max-width: 320px;
+  margin-inline: auto;
+}
+
+.create__from * {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}

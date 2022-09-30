@@ -7,14 +7,14 @@ interface InputProps {
   value: string,
   placeholder: string,
   disabled?: boolean,
-  onChange?: React.ChangeEventHandler<HTMLSelectElement>;
+  onInputChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-function Input({label, name, type, value, placeholder, disabled, onChange}: InputProps) {
+function Input({label, name, type, value, placeholder, disabled, onInputChange}: InputProps) {
   return (
     <fieldset>
       <label htmlFor={name}>{label} : </label>
-      <input type={type} name={name} id={name} value={value} placeholder={placeholder} />
+      <input type={type} name={name} id={name} value={value} placeholder={placeholder} onChange={onInputChange} />
     </fieldset>
   );
 }
