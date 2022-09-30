@@ -12,7 +12,7 @@ function TextArea({label, name, value, placeholder, onTextChange}: TextAreaProps
   return (
     <fieldset>
       <label htmlFor={name}>{label} : </label>
-      <textarea name={name} id={name} placeholder={placeholder} onChange={onTextChange}>{value}</textarea>
+      <textarea name={name} id={name} placeholder={placeholder} onChange={onTextChange} defaultValue={value} />
     </fieldset>
   );
 }

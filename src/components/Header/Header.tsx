@@ -1,6 +1,5 @@
 import "./Header.css";
 
-import React from "react";
 import logo from "../../assets/logo-pass-culture.svg";
 import NavBar from "../NavBar/NavBar";
 

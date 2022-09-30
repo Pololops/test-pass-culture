@@ -27,11 +27,11 @@ function App() {
     <div className="App">
       <Header />
       <main className="main">
-          <Routes>
-            <Route path="/" element={<PageArticles />}  />
-            <Route path="/create" element={<PageCreateNews />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<PageArticles />}  />
+          <Route path="/create" element={<PageCreateNews />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
       <Footer />
     </div>

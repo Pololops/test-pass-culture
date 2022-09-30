@@ -48,7 +48,7 @@ function PageCreateNews() {
       <form method="post" className="create__from" onSubmit={submitFormHandler}>
         <Input label="Titre" name="title" type="text" value={inputTitleValue} placeholder="Entrez un titre" onInputChange={inputTitleChangeHandler} />
         {categories && <Select type="category" label="Catégorie" options={categories} onChange={onSelectHandler} createSelect={true} />}
-        <Input label="Date" name="date" type="text" value={inputDateValue} placeholder={inputDateValue} disabled={true} />
+        <Input readOnly label="Date" name="date" type="text" value={inputDateValue} placeholder={inputDateValue} disabled={true} readonly={true} />
 
         <TextArea 
           name="article" 
