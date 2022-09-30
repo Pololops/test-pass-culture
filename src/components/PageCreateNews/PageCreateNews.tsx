@@ -1,8 +1,10 @@
 import './PageCreateNews.css';
 
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import Input from '../Input/Input';
 import Select from '../Select/Select';
+import TextArea from '../TextArea/TeaxtArea';
+import Button from '../Button/Button';
 import { useContext, useEffect } from 'react';
 import { DataContext } from '../../Contexts/dataContext';
 import { LoadContextType } from '../../Contexts/dataContextTypes'
@@ -29,6 +31,11 @@ function PageCreateNews() {
     SetTextareaArticleValue(event.target.value);
   }
 
+  const submitFormHandler = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    return console.log('form submitted');
+  }
+
   useEffect(() => {
     const today: Date = new Date();
     return SetInputDateValue(today.toISOString().split('T')[0]);
@@ -38,11 +45,20 @@ function PageCreateNews() {
     <>
       <h2 className="main__title">Ajoute un article</h2>
 
-      <form method="post" className="create__from">
+      <form method="post" className="create__from" onSubmit={submitFormHandler}>
         <Input label="Titre" name="title" type="text" value={inputTitleValue} placeholder="Entrez un titre" onInputChange={inputTitleChangeHandler} />
         {categories && <Select type="category" label="Catégorie" options={categories} onChange={onSelectHandler} createSelect={true} />}
         <Input label="Date" name="date" type="text" value={inputDateValue} placeholder={inputDateValue} disabled={true} />
-        <textarea name="article" placeholder="Saisissez votre article..." onChange={textChangeHandle}>{textareaArticleValue}</textarea>
+
+        <TextArea 
+          name="article" 
+          placeholder="Saisissez votre article..." 
+          onTextChange={textChangeHandle} 
+          value={textareaArticleValue} 
+          label="Contenu de l'article" 
+        />
+
+        <Button type="submit" label="Enregistrer votre article" />
       </form>
     </>
   );
